@@ -16,6 +16,7 @@
 		1448EF252A760FC3009BAC7F /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1448EF242A760FC3009BAC7F /* MovieInfo.swift */; };
 		1448EF2A2A76204D009BAC7F /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1448EF292A76204D009BAC7F /* MovieTableViewCell.swift */; };
 		1448EF2C2A762112009BAC7F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1448EF2B2A762112009BAC7F /* Movie.swift */; };
+		1448EF2E2A7633AA009BAC7F /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1448EF2D2A7633AA009BAC7F /* MovieDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		1448EF242A760FC3009BAC7F /* MovieInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieInfo.swift; sourceTree = "<group>"; };
 		1448EF292A76204D009BAC7F /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		1448EF2B2A762112009BAC7F /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		1448EF2D2A7633AA009BAC7F /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				1448EF142A760F26009BAC7F /* MovieTableViewController.swift */,
+				1448EF2D2A7633AA009BAC7F /* MovieDetailViewController.swift */,
 				1448EF282A762039009BAC7F /* Cell */,
 			);
 			path = Controller;
@@ -175,6 +178,7 @@
 				1448EF152A760F26009BAC7F /* MovieTableViewController.swift in Sources */,
 				1448EF2C2A762112009BAC7F /* Movie.swift in Sources */,
 				1448EF112A760F26009BAC7F /* AppDelegate.swift in Sources */,
+				1448EF2E2A7633AA009BAC7F /* MovieDetailViewController.swift in Sources */,
 				1448EF252A760FC3009BAC7F /* MovieInfo.swift in Sources */,
 				1448EF132A760F26009BAC7F /* SceneDelegate.swift in Sources */,
 			);

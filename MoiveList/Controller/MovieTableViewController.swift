@@ -40,6 +40,17 @@ class MovieTableViewController: UITableViewController {
         // 영화 리스트 배열 만큼 보여주기 위해 .count에 접근
         return movieList.movies.count
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // 사용자가 클릭 한 테이블 뷰의 상세화면을 보기위해 detailVC을 선언
+        guard let detailVC = storyboard?.instantiateViewController(identifier: "MovieDetailViewController") else {
+            return
+        }
+        
+        // 네비게이션 푸시 기능을 사용하여 화면 전환
+        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
 
 }
 

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h2J-iB-TBN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vXl-Cq-BP5">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--영화목록-->
+        <!--Movie Table View Controller-->
         <scene sceneID="h6f-IS-JPH">
             <objects>
                 <tableViewController id="dYa-c5-0Vc" customClass="MovieTableViewController" customModule="MoiveList" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +31,7 @@
                                                 <constraint firstAttribute="width" secondItem="HRL-oV-grb" secondAttribute="height" multiplier="3:4" id="PgM-zY-maP"/>
                                             </constraints>
                                         </imageView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aaa-KF-uxf">
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="aaa-KF-uxf">
                                             <rect key="frame" x="117.66666666666667" y="11" width="255.33333333333331" height="128"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="암살" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Om5-gW-XQH">
@@ -43,7 +44,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="efl-cW-ihP">
-                                                    <rect key="frame" x="0.0" y="25.333333333333336" width="255.33333333333334" height="18"/>
+                                                    <rect key="frame" x="0.0" y="23.333333333333336" width="255.33333333333334" height="18"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015.07.22." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBb-EM-5qG">
                                                             <rect key="frame" x="0.0" y="0.0" width="113.33333333333333" height="18"/>
@@ -78,8 +79,8 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQo-ns-edQ">
-                                                    <rect key="frame" x="0.0" y="48.333333333333336" width="255.33333333333334" height="79.666666666666657"/>
-                                                    <mutableString key="text">1933년 조국이 사라진 시대 대한민국 임시정부는 일본 측에 노출되지 않은 세 명을 암살작전에 지목한다. 한국 독립군 저격수 안옥윤, 신흥무관학교 출신 속사포, 폭탄 전문가 황덕삼! 김구의 두터운 신임을 받는 임시정부 경무국 대장 염석진은 이들을 찾아 나서기 시작한다. 암살단의 타깃은 조선주둔군 사령관 카와구치 마모루와 친일파 강인국. 한편, 누군가에게 거액의 의뢰를 받은 청부살인업자 하와이 피스톨이 암살단의 뒤를 쫓는데... 친일파 암살작전을 둘러싼 이들의 예측할 수 없는 운명이 펼쳐진다!</mutableString>
+                                                    <rect key="frame" x="0.0" y="44.333333333333336" width="255.33333333333334" height="83.666666666666657"/>
+                                                    <string key="text">1933년 조국이 사라진 시대 대한민국 임시정부는 일본 측에 노출되지 않은 세 명을 암살작전에 지목한다. 한국 독립군 저격수 안옥윤, 신흥무관학교 출신 속사포, 폭탄 전문가 황덕삼! 김구의 두터운 신임을 받는 임시정부 경무국 대장 염석진은 이들을 찾아 나서기 시작한다. 암살단의 타깃은 조선주둔군 사령관 카와구치 마모루와 친일파 강인국. 한편, 누군가에게 거액의 의뢰를 받은 청부살인업자 하와이 피스톨이 암살단의 뒤를 쫓는데... 친일파 암살작전을 둘러싼 이들의 예측할 수 없는 운명이 펼쳐진다!</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -112,31 +113,170 @@
                             <outlet property="delegate" destination="dYa-c5-0Vc" id="OBb-u7-eyF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="영화목록" id="hfu-Z8-eu5"/>
+                    <navigationItem key="navigationItem" id="hfu-Z8-eu5"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SS0-EV-NP3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1724" y="-13"/>
         </scene>
-        <!--Movie Detail View Controller-->
+        <!--Main Tab Bar View Controller-->
+        <scene sceneID="076-ab-0TE">
+            <objects>
+                <tabBarController id="vXl-Cq-BP5" customClass="MainTabBarViewController" customModule="MoiveList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nhn-12-YsL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="h2J-iB-TBN" kind="relationship" relationship="viewControllers" id="ghI-sn-1WH"/>
+                        <segue destination="5Vm-Dy-sb7" kind="relationship" relationship="viewControllers" id="F7W-Ft-arr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ob2-Fh-zek" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-198" y="408"/>
+        </scene>
+        <!--Movie Collection View Controller-->
+        <scene sceneID="iyt-zd-MJQ">
+            <objects>
+                <collectionViewController storyboardIdentifier="MovieCollectionViewController" id="SH3-oC-ewr" customClass="MovieCollectionViewController" customModule="MoiveList" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fh6-Mq-UKV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hd9-y3-dGQ">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bFs-Md-oTC">
+                                <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hGR-yU-dCO">
+                                    <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="SH3-oC-ewr" id="T7t-at-dlq"/>
+                            <outlet property="delegate" destination="SH3-oC-ewr" id="WLo-u4-P1x"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="VGE-he-fe0">
+                        <barButtonItem key="rightBarButtonItem" image="magnifyingglass" catalog="system" id="7RS-Ip-J41">
+                            <connections>
+                                <action selector="searchBarButtonItemClicked:" destination="SH3-oC-ewr" id="zJm-FW-xa3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="rightSearchBarButtonItem" destination="7RS-Ip-J41" id="ExO-rK-mO3"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oqq-mo-KZo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1723" y="675"/>
+        </scene>
+        <!--Movie Detail Collection View Controller-->
+        <scene sceneID="EwC-GR-N3e">
+            <objects>
+                <viewController storyboardIdentifier="MovieDetailCollectionViewController" id="TSI-YH-YRC" customClass="MovieDetailCollectionViewController" customModule="MoiveList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lbc-4t-ZSS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRr-wE-RKQ">
+                                <rect key="frame" x="161" y="408" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gym-d0-VTZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fRr-wE-RKQ" firstAttribute="centerY" secondItem="lbc-4t-ZSS" secondAttribute="centerY" id="2hI-rE-9hv"/>
+                            <constraint firstItem="fRr-wE-RKQ" firstAttribute="centerX" secondItem="lbc-4t-ZSS" secondAttribute="centerX" id="RKE-8q-kEU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="fRr-wE-RKQ" id="ytM-KX-RGK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K7Y-Nj-0GC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2459" y="675"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="FzN-dL-aFA">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="L5P-2P-R4S" customClass="SearchViewController" customModule="MoiveList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4dF-di-ZHT">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색 화면" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rg-Sp-8Ul">
+                                <rect key="frame" x="141" y="408" width="111" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tCr-1a-E4x"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7rg-Sp-8Ul" firstAttribute="centerX" secondItem="4dF-di-ZHT" secondAttribute="centerX" id="nX5-I4-t6n"/>
+                            <constraint firstItem="7rg-Sp-8Ul" firstAttribute="centerY" secondItem="4dF-di-ZHT" secondAttribute="centerY" id="wEU-pa-iu9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qeL-pm-Bug">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="QYr-72-36d">
+                            <connections>
+                                <action selector="closeBarButtonItem:" destination="L5P-2P-R4S" id="Cti-9J-tNH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="leftCloseBarButtonItem" destination="QYr-72-36d" id="afa-Jp-7sc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N45-nM-L2Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1723" y="1365"/>
+        </scene>
+        <!--Movie Detail Table View Controller-->
         <scene sceneID="h30-NA-WdO">
             <objects>
-                <viewController storyboardIdentifier="MovieDetailViewController" id="rQG-lB-XE8" customClass="MovieDetailViewController" customModule="MoiveList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieDetailViewController" id="rQG-lB-XE8" customClass="MovieDetailTableViewController" customModule="MoiveList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fnY-Zs-nF8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdl-YG-qJm">
+                                <rect key="frame" x="150" y="401" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Vge-S2-s87"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Va-6c-F6p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2495" y="-13"/>
+            <point key="canvasLocation" x="2459" y="-13"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--영화목록-->
         <scene sceneID="QI9-Jj-84Y">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h2J-iB-TBN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="영화목록" image="tablecells" catalog="system" selectedImage="tablecells.fill" id="HoP-zp-CnH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6SP-BI-Unm">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -151,8 +291,50 @@
             </objects>
             <point key="canvasLocation" x="980.91603053435108" y="-12.67605633802817"/>
         </scene>
+        <!--래훈님의 책장-->
+        <scene sceneID="Gsy-Yq-xAt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Vm-Dy-sb7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="래훈님의 책장" image="folder" catalog="system" selectedImage="folder.fill" id="xF0-hU-SBM"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9wi-JN-acX">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SH3-oC-ewr" kind="relationship" relationship="rootViewController" id="ryb-Fp-0io"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ra-x9-OgI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="981" y="675"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WeQ-xH-ACy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Xc-r7-MwP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="res-fA-pxT">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="L5P-2P-R4S" kind="relationship" relationship="rootViewController" id="Uec-Fq-BnO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q2b-AT-CQA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="981" y="1356"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="folder" catalog="system" width="128" height="96"/>
+        <image name="folder.fill" catalog="system" width="128" height="96"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="tablecells" catalog="system" width="128" height="93"/>
+        <image name="tablecells.fill" catalog="system" width="128" height="93"/>
         <image name="해운대" width="240" height="361"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

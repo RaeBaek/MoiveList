@@ -37,7 +37,7 @@ class MovieCollectionViewController: UICollectionViewController {
         let nav = UINavigationController(rootViewController: vc)
         
         nav.modalTransitionStyle = .coverVertical
-        nav.modalPresentationStyle = .overFullScreen
+        nav.modalPresentationStyle = .fullScreen
         
         present(nav, animated: true)
     }

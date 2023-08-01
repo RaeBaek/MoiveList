@@ -15,4 +15,14 @@ struct Movie {
     var runtime: Int
     var overview: String
     var rate: Double
+    var like: Bool
+//    let red: Double
+//    let green: Double
+//    let blue: Double
+    
+    var movieDiscription: String {
+        get {
+            return "\(releaseDate) | \(runtime)분 | \(rate)점"
+        }
+    }
 }

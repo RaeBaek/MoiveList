@@ -9,11 +9,13 @@ import UIKit
 
 class MovieCollectionViewCell: UICollectionViewCell {
     
+    static let identifier = "MovieCollectionViewCell"
+    
     @IBOutlet var backView: UIView!
     @IBOutlet var movietitleLabel: UILabel!
     @IBOutlet var rateLabel: UILabel!
     @IBOutlet var posterImageView: UIImageView!
-    
+    @IBOutlet var likeButton: UIButton!
     
     func configureCell(item: Movie) {
         
@@ -35,6 +37,15 @@ class MovieCollectionViewCell: UICollectionViewCell {
         
         posterImageView.image = UIImage(named: item.posterImageName)
         posterImageView.contentMode = .scaleToFill
+        
+        likeButton.setTitle("", for: .normal)
+        likeButton.tintColor = .systemPink
+        
+        if item.like {
+            likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        } else {
+            likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
     }
     
 }

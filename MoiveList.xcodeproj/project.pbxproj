@@ -79,9 +79,9 @@
 				1448EF102A760F26009BAC7F /* AppDelegate.swift */,
 				1448EF122A760F26009BAC7F /* SceneDelegate.swift */,
 				1448EF262A762015009BAC7F /* Model */,
+				14FB248C2A77E16F008FE6F4 /* View */,
 				1448EF272A76201E009BAC7F /* Controller */,
 				1448EF162A760F26009BAC7F /* Main.storyboard */,
-				14FB248A2A77B97D008FE6F4 /* MainTabBarViewController.swift */,
 				1448EF192A760F28009BAC7F /* Assets.xcassets */,
 				1448EF1B2A760F28009BAC7F /* LaunchScreen.storyboard */,
 				1448EF1E2A760F28009BAC7F /* Info.plist */,
@@ -101,6 +101,7 @@
 		1448EF272A76201E009BAC7F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				14FB248A2A77B97D008FE6F4 /* MainTabBarViewController.swift */,
 				1448EF6B2A77AB13009BAC7F /* SearchViewController.swift */,
 				1448EF6F2A77B12E009BAC7F /* TableView */,
 				1448EF702A77B135009BAC7F /* CollectionView */,
@@ -143,6 +144,13 @@
 				1448EF682A779A80009BAC7F /* MovieCollectionViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		14FB248C2A77E16F008FE6F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

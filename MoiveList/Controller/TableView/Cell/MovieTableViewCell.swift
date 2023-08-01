@@ -13,8 +13,6 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet var posterImageView: UIImageView!
     @IBOutlet var movieTitleLabel: UILabel!
     @IBOutlet var releaseDateLabel: UILabel!
-    @IBOutlet var runtimeLabel: UILabel!
-    @IBOutlet var rateLabel: UILabel!
     @IBOutlet var overviewLabel: UILabel!
     
     // 셀을 꾸미기 위한 configureCell 함수.
@@ -22,9 +20,7 @@ class MovieTableViewCell: UITableViewCell {
     func configureCell(row: Movie) {
         posterImageView.image = UIImage(named: row.posterImageName)
         movieTitleLabel.text = row.title
-        releaseDateLabel.text = row.releaseDate
-        runtimeLabel.text = "\(row.runtime)분"
-        rateLabel.text = "\(row.rate)점"
+        releaseDateLabel.text = row.movieDiscription
         overviewLabel.text = row.overview
         
     }

@@ -11,7 +11,11 @@ class MovieCollectionViewController: UICollectionViewController {
     
     @IBOutlet var rightSearchBarButtonItem: UIBarButtonItem!
     
-    let movieCollectionList = MovieInfo()
+    var movieCollectionList = MovieInfo() {
+        didSet { // 변수가 달라짐을 감지
+            collectionView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,15 +70,23 @@ class MovieCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCollectionViewCell", for: indexPath) as? MovieCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCollectionViewCell.identifier, for: indexPath) as? MovieCollectionViewCell else {
             return UICollectionViewCell()
         }
         
-        let item = movieCollectionList.movies[indexPath.row]
+        cell.likeButton.tag = indexPath.row
+        cell.likeButton.addTarget(self, action: #selector(likeButtonClicked), for: .touchUpInside)
         
+        let item = movieCollectionList.movies[indexPath.row]
         cell.configureCell(item: item)
         
         return cell
+    }
+    
+    @objc
+    func likeButtonClicked(_ sender: UIButton) {
+        print("\(sender.tag) clicked")
+        movieCollectionList.movies[sender.tag].like.toggle()
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -83,12 +95,15 @@ class MovieCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        guard let vc = sb.instantiateViewController(withIdentifier: "MovieDetailCollectionViewController") as? MovieDetailCollectionViewController else {
+//        let sb = UIStoryboard(name: "Main", bundle: nil)
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "MovieDetailCollectionViewController") as? MovieDetailCollectionViewController else {
             return
         }
         
-        vc.navigationTitle = movieCollectionList.movies[indexPath.row].title
+        let item = movieCollectionList.movies[indexPath.row]
+        
+        vc.movieInfo = item
+//        vc.configureViewController(item: item)
         
         navigationController?.pushViewController(vc, animated: true)
         

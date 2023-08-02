@@ -9,6 +9,7 @@ import UIKit
 
 class MovieTableViewCell: UITableViewCell {
 
+    static let identifier = "MovieTableViewCell"
     // cell에서 보여주고자 하는 정보에 대한 변수들을 @IBOutlet 선언
     @IBOutlet var posterImageView: UIImageView!
     @IBOutlet var movieTitleLabel: UILabel!

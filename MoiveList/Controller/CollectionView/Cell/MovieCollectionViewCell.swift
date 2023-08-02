@@ -19,11 +19,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
     
     func configureCell(item: Movie) {
         
-        let red = Double.random(in: 0...255)
-        let green = Double.random(in: 0...255)
-        let blue = Double.random(in: 0...255)
-        
-        backView.backgroundColor = UIColor(red: red / 255, green: green / 255, blue: blue / 255, alpha: 1.0)
+        backView.backgroundColor = UIColor(red: item.red / 255, green: item.green / 255, blue: item.blue / 255, alpha: 1.0)
         backView.layer.cornerRadius = 10
         
         movietitleLabel.text = item.title

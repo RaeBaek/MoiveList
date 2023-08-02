@@ -24,7 +24,7 @@ class MovieTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // 어떤 셀을 보여줄 것인지에 대한 셀 정보를 guard else와 as? 다운캐스팅 구문으로 선언
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell") as? MovieTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier) as? MovieTableViewCell else {
             return UITableViewCell()
         }
         
@@ -46,12 +46,15 @@ class MovieTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         // 사용자가 클릭 한 테이블 뷰의 상세화면을 보기위해 detailVC을 선언
-        guard let detailVC = storyboard?.instantiateViewController(identifier: "MovieDetailViewController") else {
+        guard let vc = storyboard?.instantiateViewController(identifier: MovieDetailViewController.identifier) as? MovieDetailViewController else {
             return
         }
         
+        let row = movieTableList.movies[indexPath.row]
+        vc.movieInfo = row
+        
         // 네비게이션 푸시 기능을 사용하여 화면 전환
-        self.navigationController?.pushViewController(detailVC, animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
 }

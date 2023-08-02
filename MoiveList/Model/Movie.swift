@@ -16,9 +16,9 @@ struct Movie {
     var overview: String
     var rate: Double
     var like: Bool
-//    let red: Double
-//    let green: Double
-//    let blue: Double
+    let red: Double
+    let green: Double
+    let blue: Double
     
     var movieDiscription: String {
         get {

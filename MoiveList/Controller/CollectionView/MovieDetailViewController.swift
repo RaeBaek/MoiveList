@@ -7,7 +7,9 @@
 
 import UIKit
 
-class MovieDetailCollectionViewController: UIViewController {
+class MovieDetailViewController: UIViewController {
+    
+    static var identifier = "MovieDetailViewController"
     
     @IBOutlet var backPosterImageView: UIImageView!
     @IBOutlet var sidePosterImageView: UIImageView!
@@ -22,7 +24,7 @@ class MovieDetailCollectionViewController: UIViewController {
     
     @IBOutlet var overViewLabel: UILabel!
     
-    var movieInfo = Movie(posterImageName: "", title: "", releaseDate: "", runtime: 0, overview: "", rate: 0, like: false)
+    var movieInfo: Movie?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,10 @@ class MovieDetailCollectionViewController: UIViewController {
         let backImage = UIImage(systemName: "chevron.backward")
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: backImage, style: .plain, target: self, action: #selector(backButtonClicked))
         navigationItem.leftBarButtonItem?.tintColor = .black
+        
+        let xImage = UIImage(systemName: "xmark")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: xImage, style: .plain, target: self, action: #selector(xButtonClicked))
+        navigationItem.rightBarButtonItem?.tintColor = .black
         
         configureViewController()
         
@@ -40,7 +46,16 @@ class MovieDetailCollectionViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    @objc
+    func xButtonClicked() {
+        dismiss(animated: true)
+    }
+    
     func configureViewController() {
+        
+        guard let movieInfo = movieInfo else {
+            return
+        }
         
         title = movieInfo.title
         

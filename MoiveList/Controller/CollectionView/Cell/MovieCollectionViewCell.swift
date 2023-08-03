@@ -17,10 +17,25 @@ class MovieCollectionViewCell: UICollectionViewCell {
     @IBOutlet var posterImageView: UIImageView!
     @IBOutlet var likeButton: UIButton!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        backView.clipsToBounds = true
+        backView.layer.cornerRadius = 10
+        
+        self.layer.shadowColor = UIColor.black.cgColor
+        // 햇빛이 비추는 위치
+        self.layer.shadowOffset = .zero //CGSize(width: 0, height: 0)
+        // 섀도우 퍼짐의 정도
+        self.layer.shadowRadius = 5
+        // 섀도우 불투명도
+        self.layer.shadowOpacity = 0.5
+        self.clipsToBounds = false
+    }
+    
     func configureCell(item: Movie) {
         
         backView.backgroundColor = UIColor(red: item.red / 255, green: item.green / 255, blue: item.blue / 255, alpha: 1.0)
-        backView.layer.cornerRadius = 10
         
         movietitleLabel.text = item.title
         movietitleLabel.font = .systemFont(ofSize: 19, weight: .bold)

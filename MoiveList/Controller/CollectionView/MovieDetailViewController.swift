@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum TransitionType {
+    case modal
+    case navigation
+}
+
 class MovieDetailViewController: UIViewController {
     
     static var identifier = "MovieDetailViewController"
@@ -23,19 +28,36 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet var entertainmentLabel: UILabel!
     
     @IBOutlet var overViewLabel: UILabel!
+    @IBOutlet var textField: UITextField!
+    @IBOutlet var textView: UITextView!
     
     var movieInfo: Movie?
+    var type: TransitionType?
+    var contents: String?
+    
+    let placeholderText = "내용을 입력해주세요."
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let backImage = UIImage(systemName: "chevron.backward")
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: backImage, style: .plain, target: self, action: #selector(backButtonClicked))
-        navigationItem.leftBarButtonItem?.tintColor = .black
+        guard let type = type else {
+            return
+        }
         
-        let xImage = UIImage(systemName: "xmark")
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: xImage, style: .plain, target: self, action: #selector(xButtonClicked))
-        navigationItem.rightBarButtonItem?.tintColor = .black
+        textView.delegate = self
+        textView.text = placeholderText
+        textView.textColor = .lightGray
+        
+        switch type {
+        case .modal:
+            let xImage = UIImage(systemName: "xmark")
+            navigationItem.leftBarButtonItem = UIBarButtonItem(image: xImage, style: .plain, target: self, action: #selector(xButtonClicked))
+            navigationItem.leftBarButtonItem?.tintColor = .black
+        case .navigation:
+            let backImage = UIImage(systemName: "chevron.backward")
+            navigationItem.leftBarButtonItem = UIBarButtonItem(image: backImage, style: .plain, target: self, action: #selector(backButtonClicked))
+            navigationItem.leftBarButtonItem?.tintColor = .black
+        }
         
         configureViewController()
         
@@ -90,4 +112,29 @@ class MovieDetailViewController: UIViewController {
         overViewLabel.sizeToFit()
     }
 
+}
+
+extension MovieDetailViewController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        print(textView.text.count)
+        
+    }
+    
+    // 편집이 시작될 때(커서가 시작될 때)
+    // 플레이스 홀더와 텍스트뷰 글자가 같다면 clear, color
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == placeholderText {
+            textView.text = nil
+            textView.textColor = .black
+        }
+    }
+    
+    // 편집이 끝날 때(커서가 없어지는 순간)
+    // 사용자가 아무 글자도 안 썼으면 플레이스 홀더 글자 보이게 설정!
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = placeholderText
+            textView.textColor = .lightGray
+        }
+    }
 }

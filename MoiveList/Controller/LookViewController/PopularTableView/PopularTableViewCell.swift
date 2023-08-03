@@ -8,7 +8,7 @@
 import UIKit
 
 class PopularTableViewCell: UITableViewCell {
-
+    
     static let identifier = "PopularTableViewCell"
     
     @IBOutlet var imageBackView: UIView!
@@ -18,19 +18,32 @@ class PopularTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        imageBackView.clipsToBounds = true
-        imageBackView.layer.cornerRadius = 10
+        
+        
         movietitleLabel.font = .systemFont(ofSize: 15, weight: .medium)
         movietitleLabel.textColor = .black
         movieDescriptionLabel.font = .systemFont(ofSize: 13, weight: .regular)
         movieDescriptionLabel.textColor = .gray
         
+        posterImageView.clipsToBounds = true
+        posterImageView.layer.cornerRadius = 10
+        
+        imageBackView.layer.cornerRadius = 10
+        imageBackView.layer.shadowColor = UIColor.black.cgColor
+        // 햇빛이 비추는 위치
+        imageBackView.layer.shadowOffset = .zero //CGSize(width: 0, height: 0)
+        // 섀도우 퍼짐의 정도
+        imageBackView.layer.shadowRadius = 3
+        // 섀도우 불투명도
+        imageBackView.layer.shadowOpacity = 0.5
+//        imageBackView.clipsToBounds = true
+        
         
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
     }
     
     func configureCell(row: Movie) {

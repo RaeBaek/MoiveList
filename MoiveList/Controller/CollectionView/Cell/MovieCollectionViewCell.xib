@@ -65,14 +65,14 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="aOl-yT-bVL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="7Xw-tU-1I8"/>
-                <constraint firstItem="aOl-yT-bVL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="O78-kF-xkb"/>
-                <constraint firstAttribute="bottom" secondItem="aOl-yT-bVL" secondAttribute="bottom" id="TLV-Qb-nI5"/>
-                <constraint firstAttribute="trailing" secondItem="aOl-yT-bVL" secondAttribute="trailing" id="iu7-8j-mRE"/>
+                <constraint firstAttribute="bottom" secondItem="aOl-yT-bVL" secondAttribute="bottom" id="5jp-Yz-Ezc"/>
+                <constraint firstItem="aOl-yT-bVL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Qro-j6-mzA"/>
+                <constraint firstAttribute="trailing" secondItem="aOl-yT-bVL" secondAttribute="trailing" id="S6G-aq-mFT"/>
+                <constraint firstItem="aOl-yT-bVL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hwL-I2-8gK"/>
             </constraints>
             <size key="customSize" width="204" height="187"/>
             <connections>
-                <outlet property="backView" destination="aOl-yT-bVL" id="cjU-M4-747"/>
+                <outlet property="backView" destination="aOl-yT-bVL" id="KfI-GM-vPz"/>
                 <outlet property="likeButton" destination="tiw-Gr-XUu" id="X1m-Sc-3Sv"/>
                 <outlet property="movietitleLabel" destination="8Q1-YH-g5j" id="GyG-Wr-2MP"/>
                 <outlet property="posterImageView" destination="7lM-jP-3kh" id="k31-yZ-Usg"/>

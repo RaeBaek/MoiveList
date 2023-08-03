@@ -13,6 +13,8 @@ class LookViewController: UIViewController {
     @IBOutlet var popularTableView: UITableView!
     
     let data = MovieInfo()
+    // 서치바 초기화
+    let searchBar = UISearchBar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +79,7 @@ extension LookViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         let item = data.movies[indexPath.row]
         vc.movieInfo = item
+        vc.type = .modal
         
         let nav = UINavigationController(rootViewController: vc)
         
@@ -102,19 +105,19 @@ extension LookViewController: UITableViewDelegate, UITableViewDataSource {
         let row = data.movies[indexPath.row]
         
         cell.configureCell(row: row)
-        
         cell.selectionStyle = .none
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let vc = storyboard?.instantiateViewController(identifier: "MovieDetailViewController") as? MovieDetailViewController else {
+        guard let vc = storyboard?.instantiateViewController(identifier: MovieDetailViewController.identifier) as? MovieDetailViewController else {
             return
         }
         
         let row = data.movies[indexPath.row]
         vc.movieInfo = row
+        vc.type = .modal
         
         let nav = UINavigationController(rootViewController: vc)
         

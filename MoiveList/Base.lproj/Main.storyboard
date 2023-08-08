@@ -346,19 +346,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색 화면" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rg-Sp-8Ul">
-                                <rect key="frame" x="141" y="408" width="111" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="2B0-7Z-WTR">
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="L5P-2P-R4S" id="72p-S6-Bi7"/>
+                                </connections>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XE8-uH-UnK">
+                                <rect key="frame" x="0.0" y="159" width="393" height="659"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OMZ-eR-epb">
+                                    <size key="itemSize" width="159" height="173"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LibraryCollectionViewCell" id="UQ2-Me-Szh" customClass="LibraryCollectionViewCell" customModule="MoiveList" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="159" height="173"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kQW-F4-XIe">
+                                            <rect key="frame" x="0.0" y="0.0" width="159" height="173"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xhd-M9-VvM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="159" height="173"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Xhd-M9-VvM" firstAttribute="top" secondItem="kQW-F4-XIe" secondAttribute="top" id="4QB-aj-Rkc"/>
+                                                <constraint firstAttribute="bottom" secondItem="Xhd-M9-VvM" secondAttribute="bottom" id="Qco-Ez-fpn"/>
+                                                <constraint firstItem="Xhd-M9-VvM" firstAttribute="leading" secondItem="kQW-F4-XIe" secondAttribute="leading" id="VnZ-Vw-f1h"/>
+                                                <constraint firstAttribute="trailing" secondItem="Xhd-M9-VvM" secondAttribute="trailing" id="frb-gJ-Ijf"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="159" height="173"/>
+                                        <connections>
+                                            <outlet property="thumbnailImage" destination="Xhd-M9-VvM" id="1eX-uL-GvC"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tCr-1a-E4x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="7rg-Sp-8Ul" firstAttribute="centerX" secondItem="4dF-di-ZHT" secondAttribute="centerX" id="nX5-I4-t6n"/>
-                            <constraint firstItem="7rg-Sp-8Ul" firstAttribute="centerY" secondItem="4dF-di-ZHT" secondAttribute="centerY" id="wEU-pa-iu9"/>
+                            <constraint firstItem="tCr-1a-E4x" firstAttribute="bottom" secondItem="XE8-uH-UnK" secondAttribute="bottom" id="0i1-6r-Mwb"/>
+                            <constraint firstItem="XE8-uH-UnK" firstAttribute="top" secondItem="2B0-7Z-WTR" secondAttribute="bottom" id="Kx6-gP-UB9"/>
+                            <constraint firstItem="tCr-1a-E4x" firstAttribute="trailing" secondItem="XE8-uH-UnK" secondAttribute="trailing" id="SBw-D1-wjo"/>
+                            <constraint firstItem="2B0-7Z-WTR" firstAttribute="trailing" secondItem="tCr-1a-E4x" secondAttribute="trailing" id="SKk-Zb-M2m"/>
+                            <constraint firstItem="XE8-uH-UnK" firstAttribute="leading" secondItem="tCr-1a-E4x" secondAttribute="leading" id="emh-6c-Ttl"/>
+                            <constraint firstItem="2B0-7Z-WTR" firstAttribute="leading" secondItem="tCr-1a-E4x" secondAttribute="leading" id="hoi-5a-FWm"/>
+                            <constraint firstItem="2B0-7Z-WTR" firstAttribute="top" secondItem="tCr-1a-E4x" secondAttribute="top" id="sV2-Vl-Rx2"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="YvE-Kw-Fvd" appends="YES" id="06j-zP-F8T"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="qeL-pm-Bug">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="QYr-72-36d">
@@ -368,12 +413,19 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bookSearchBar" destination="2B0-7Z-WTR" id="H6F-zx-uYG"/>
                         <outlet property="leftCloseBarButtonItem" destination="QYr-72-36d" id="afa-Jp-7sc"/>
+                        <outlet property="libraryCollectionView" destination="XE8-uH-UnK" id="qkK-bF-4Xy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N45-nM-L2Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="YvE-Kw-Fvd">
+                    <connections>
+                        <action selector="gestureTapped:" destination="L5P-2P-R4S" id="tCU-Dm-ybI"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1723" y="-690"/>
+            <point key="canvasLocation" x="1722.9007633587785" y="-690.14084507042253"/>
         </scene>
         <!--영화목록-->
         <scene sceneID="QI9-Jj-84Y">

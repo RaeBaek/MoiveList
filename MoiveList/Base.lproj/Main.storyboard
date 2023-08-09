@@ -31,38 +31,37 @@
                                                 <constraint firstAttribute="width" secondItem="HRL-oV-grb" secondAttribute="height" multiplier="3:4" id="PgM-zY-maP"/>
                                             </constraints>
                                         </imageView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="aaa-KF-uxf">
-                                            <rect key="frame" x="117.66666666666667" y="11" width="255.33333333333331" height="128"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="암살" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Om5-gW-XQH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="255.33333333333334" height="20.333333333333332"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2015.07.22." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBb-EM-5qG">
-                                                    <rect key="frame" x="0.0" y="23.333333333333336" width="255.33333333333334" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQo-ns-edQ">
-                                                    <rect key="frame" x="0.0" y="44.333333333333336" width="255.33333333333334" height="83.666666666666657"/>
-                                                    <string key="text">1933년 조국이 사라진 시대 대한민국 임시정부는 일본 측에 노출되지 않은 세 명을 암살작전에 지목한다. 한국 독립군 저격수 안옥윤, 신흥무관학교 출신 속사포, 폭탄 전문가 황덕삼! 김구의 두터운 신임을 받는 임시정부 경무국 대장 염석진은 이들을 찾아 나서기 시작한다. 암살단의 타깃은 조선주둔군 사령관 카와구치 마모루와 친일파 강인국. 한편, 누군가에게 거액의 의뢰를 받은 청부살인업자 하와이 피스톨이 암살단의 뒤를 쫓는데... 친일파 암살작전을 둘러싼 이들의 예측할 수 없는 운명이 펼쳐진다!</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="암살" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Om5-gW-XQH">
+                                            <rect key="frame" x="117.66666666666667" y="9.9999999999999982" width="29.666666666666671" height="20.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015.07.22." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBb-EM-5qG">
+                                            <rect key="frame" x="117.66666666666666" y="35.333333333333336" width="73.666666666666657" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQo-ns-edQ">
+                                            <rect key="frame" x="117.66666666666666" y="57.333333333333329" width="265.33333333333337" height="155.33333333333337"/>
+                                            <string key="text">1933년 조국이 사라진 시대 대한민국 임시정부는 일본 측에 노출되지 않은 세 명을 암살작전에 지목한다. 한국 독립군 저격수 안옥윤, 신흥무관학교 출신 속사포, 폭탄 전문가 황덕삼! 김구의 두터운 신임을 받는 임시정부 경무국 대장 염석진은 이들을 찾아 나서기 시작한다. 암살단의 타깃은 조선주둔군 사령관 카와구치 마모루와 친일파 강인국. 한편, 누군가에게 거액의 의뢰를 받은 청부살인업자 하와이 피스톨이 암살단의 뒤를 쫓는데... 친일파 암살작전을 둘러싼 이들의 예측할 수 없는 운명이 펼쳐진다!</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="kBb-EM-5qG" firstAttribute="leading" secondItem="HRL-oV-grb" secondAttribute="trailing" constant="10" id="9bP-t8-4Ht"/>
+                                        <constraint firstItem="jQo-ns-edQ" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="D7Y-DX-xak" secondAttribute="bottom" constant="10" id="CyK-vy-ycK"/>
+                                        <constraint firstItem="Om5-gW-XQH" firstAttribute="top" secondItem="D7Y-DX-xak" secondAttribute="top" constant="10" id="GXb-N0-9yS"/>
                                         <constraint firstItem="HRL-oV-grb" firstAttribute="leading" secondItem="D7Y-DX-xak" secondAttribute="leading" constant="10" id="JTm-6g-lxH"/>
-                                        <constraint firstItem="HRL-oV-grb" firstAttribute="top" secondItem="D7Y-DX-xak" secondAttribute="top" constant="10" id="Xb6-A6-fpu"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="aaa-KF-uxf" secondAttribute="trailing" id="cqo-Xb-3Sc"/>
-                                        <constraint firstItem="aaa-KF-uxf" firstAttribute="top" secondItem="D7Y-DX-xak" secondAttribute="topMargin" id="gw4-K3-mae"/>
-                                        <constraint firstItem="aaa-KF-uxf" firstAttribute="leading" secondItem="HRL-oV-grb" secondAttribute="trailing" constant="10" id="iUv-W8-4gQ"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="aaa-KF-uxf" secondAttribute="bottom" id="mBA-D9-80g"/>
+                                        <constraint firstItem="Om5-gW-XQH" firstAttribute="leading" secondItem="HRL-oV-grb" secondAttribute="trailing" constant="10" id="PiQ-yV-olE"/>
+                                        <constraint firstItem="HRL-oV-grb" firstAttribute="top" secondItem="D7Y-DX-xak" secondAttribute="top" constant="10" id="alW-a6-9lE"/>
+                                        <constraint firstAttribute="trailing" secondItem="jQo-ns-edQ" secondAttribute="trailing" constant="10" id="jJO-eo-3BR"/>
+                                        <constraint firstItem="jQo-ns-edQ" firstAttribute="leading" secondItem="HRL-oV-grb" secondAttribute="trailing" constant="10" id="oaB-TO-fo7"/>
+                                        <constraint firstItem="kBb-EM-5qG" firstAttribute="top" secondItem="Om5-gW-XQH" secondAttribute="bottom" constant="5" id="tB0-jo-zE4"/>
+                                        <constraint firstItem="jQo-ns-edQ" firstAttribute="top" secondItem="kBb-EM-5qG" secondAttribute="bottom" constant="5" id="thk-qf-QR1"/>
                                         <constraint firstAttribute="bottom" secondItem="HRL-oV-grb" secondAttribute="bottom" constant="10" id="wJ0-Cu-MQ3"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -353,52 +352,95 @@
                                     <outlet property="delegate" destination="L5P-2P-R4S" id="72p-S6-Bi7"/>
                                 </connections>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XE8-uH-UnK">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GgW-7Q-FaT">
                                 <rect key="frame" x="0.0" y="159" width="393" height="659"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OMZ-eR-epb">
-                                    <size key="itemSize" width="159" height="173"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LibraryCollectionViewCell" id="UQ2-Me-Szh" customClass="LibraryCollectionViewCell" customModule="MoiveList" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="159" height="173"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kQW-F4-XIe">
-                                            <rect key="frame" x="0.0" y="0.0" width="159" height="173"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LibraryTableViewCell" rowHeight="181" id="4Kg-Dh-BXE" customClass="LibraryTableViewCell" customModule="MoiveList" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="181"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Kg-Dh-BXE" id="3oU-RP-etK">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="181"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xhd-M9-VvM">
-                                                    <rect key="frame" x="0.0" y="0.0" width="159" height="173"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b7M-6A-Jwr">
+                                                    <rect key="frame" x="10" y="10" width="107.33333333333333" height="161"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="b7M-6A-Jwr" secondAttribute="height" multiplier="2:3" id="fmC-fC-1aq"/>
+                                                    </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="책 제목" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4V-Ax-ueg">
+                                                    <rect key="frame" x="127.33333333333333" y="9.9999999999999982" width="255.66666666666669" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="출판사" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhr-tP-Hw2">
+                                                    <rect key="frame" x="127.33333333333333" y="35.333333333333336" width="44.333333333333329" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="출판일시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfg-dq-X5R">
+                                                    <rect key="frame" x="127.33333333333333" y="61.333333333333343" width="255.66666666666669" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="판매가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJ9-De-79B">
+                                                    <rect key="frame" x="127.33333333333331" y="87.333333333333329" width="45" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세일가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sl-5m-bSG">
+                                                    <rect key="frame" x="127.33333333333331" y="113.33333333333333" width="45" height="20.999999999999986"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Xhd-M9-VvM" firstAttribute="top" secondItem="kQW-F4-XIe" secondAttribute="top" id="4QB-aj-Rkc"/>
-                                                <constraint firstAttribute="bottom" secondItem="Xhd-M9-VvM" secondAttribute="bottom" id="Qco-Ez-fpn"/>
-                                                <constraint firstItem="Xhd-M9-VvM" firstAttribute="leading" secondItem="kQW-F4-XIe" secondAttribute="leading" id="VnZ-Vw-f1h"/>
-                                                <constraint firstAttribute="trailing" secondItem="Xhd-M9-VvM" secondAttribute="trailing" id="frb-gJ-Ijf"/>
+                                                <constraint firstItem="b7M-6A-Jwr" firstAttribute="leading" secondItem="3oU-RP-etK" secondAttribute="leading" constant="10" id="27W-Yq-pDe"/>
+                                                <constraint firstItem="6sl-5m-bSG" firstAttribute="leading" secondItem="b7M-6A-Jwr" secondAttribute="trailing" constant="10" id="522-sV-ywS"/>
+                                                <constraint firstItem="BJ9-De-79B" firstAttribute="leading" secondItem="b7M-6A-Jwr" secondAttribute="trailing" constant="10" id="Ga4-12-lBF"/>
+                                                <constraint firstAttribute="trailing" secondItem="bfg-dq-X5R" secondAttribute="trailing" constant="10" id="NFj-N5-5ru"/>
+                                                <constraint firstItem="bfg-dq-X5R" firstAttribute="leading" secondItem="b7M-6A-Jwr" secondAttribute="trailing" constant="10" id="On6-LC-QL5"/>
+                                                <constraint firstItem="q4V-Ax-ueg" firstAttribute="leading" secondItem="b7M-6A-Jwr" secondAttribute="trailing" constant="10" id="RxP-e9-tDG"/>
+                                                <constraint firstAttribute="bottom" secondItem="b7M-6A-Jwr" secondAttribute="bottom" constant="10" id="YwN-yr-HdU"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="6sl-5m-bSG" secondAttribute="bottom" constant="10" id="c7T-cQ-a9L"/>
+                                                <constraint firstItem="BJ9-De-79B" firstAttribute="top" secondItem="bfg-dq-X5R" secondAttribute="bottom" constant="5" id="cuS-cG-K03"/>
+                                                <constraint firstItem="b7M-6A-Jwr" firstAttribute="top" secondItem="3oU-RP-etK" secondAttribute="top" constant="10" id="oD7-lw-1z1"/>
+                                                <constraint firstItem="6sl-5m-bSG" firstAttribute="top" secondItem="BJ9-De-79B" secondAttribute="bottom" constant="5" id="oYw-Sl-RZf"/>
+                                                <constraint firstItem="q4V-Ax-ueg" firstAttribute="top" secondItem="3oU-RP-etK" secondAttribute="top" constant="10" id="tWk-so-ZTU"/>
+                                                <constraint firstAttribute="trailing" secondItem="q4V-Ax-ueg" secondAttribute="trailing" constant="10" id="tqp-4k-U81"/>
+                                                <constraint firstItem="bhr-tP-Hw2" firstAttribute="leading" secondItem="b7M-6A-Jwr" secondAttribute="trailing" constant="10" id="yBG-2X-32L"/>
+                                                <constraint firstItem="bhr-tP-Hw2" firstAttribute="top" secondItem="q4V-Ax-ueg" secondAttribute="bottom" constant="5" id="zDj-zd-0bI"/>
+                                                <constraint firstItem="bfg-dq-X5R" firstAttribute="top" secondItem="bhr-tP-Hw2" secondAttribute="bottom" constant="5" id="zsY-Ne-HHG"/>
                                             </constraints>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="159" height="173"/>
+                                        </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="thumbnailImage" destination="Xhd-M9-VvM" id="1eX-uL-GvC"/>
+                                            <outlet property="bookTitleLabel" destination="q4V-Ax-ueg" id="18R-cP-ynl"/>
+                                            <outlet property="dateLabel" destination="bfg-dq-X5R" id="WgA-DP-S7G"/>
+                                            <outlet property="posterImageView" destination="b7M-6A-Jwr" id="WeH-22-3cF"/>
+                                            <outlet property="priceLabel" destination="BJ9-De-79B" id="dB2-S1-yem"/>
+                                            <outlet property="publisherLabel" destination="bhr-tP-Hw2" id="Me1-kg-2nC"/>
+                                            <outlet property="saleLabel" destination="6sl-5m-bSG" id="NHh-zf-9aw"/>
                                         </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tCr-1a-E4x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="tCr-1a-E4x" firstAttribute="bottom" secondItem="XE8-uH-UnK" secondAttribute="bottom" id="0i1-6r-Mwb"/>
-                            <constraint firstItem="XE8-uH-UnK" firstAttribute="top" secondItem="2B0-7Z-WTR" secondAttribute="bottom" id="Kx6-gP-UB9"/>
-                            <constraint firstItem="tCr-1a-E4x" firstAttribute="trailing" secondItem="XE8-uH-UnK" secondAttribute="trailing" id="SBw-D1-wjo"/>
+                            <constraint firstItem="GgW-7Q-FaT" firstAttribute="top" secondItem="2B0-7Z-WTR" secondAttribute="bottom" id="K4n-97-Z6i"/>
                             <constraint firstItem="2B0-7Z-WTR" firstAttribute="trailing" secondItem="tCr-1a-E4x" secondAttribute="trailing" id="SKk-Zb-M2m"/>
-                            <constraint firstItem="XE8-uH-UnK" firstAttribute="leading" secondItem="tCr-1a-E4x" secondAttribute="leading" id="emh-6c-Ttl"/>
+                            <constraint firstItem="tCr-1a-E4x" firstAttribute="trailing" secondItem="GgW-7Q-FaT" secondAttribute="trailing" id="eFL-Ay-4RP"/>
+                            <constraint firstItem="tCr-1a-E4x" firstAttribute="bottom" secondItem="GgW-7Q-FaT" secondAttribute="bottom" id="h0H-XN-6G8"/>
                             <constraint firstItem="2B0-7Z-WTR" firstAttribute="leading" secondItem="tCr-1a-E4x" secondAttribute="leading" id="hoi-5a-FWm"/>
+                            <constraint firstItem="GgW-7Q-FaT" firstAttribute="leading" secondItem="tCr-1a-E4x" secondAttribute="leading" id="mxM-xR-Dvc"/>
                             <constraint firstItem="2B0-7Z-WTR" firstAttribute="top" secondItem="tCr-1a-E4x" secondAttribute="top" id="sV2-Vl-Rx2"/>
                         </constraints>
                         <connections>
@@ -415,7 +457,7 @@
                     <connections>
                         <outlet property="bookSearchBar" destination="2B0-7Z-WTR" id="H6F-zx-uYG"/>
                         <outlet property="leftCloseBarButtonItem" destination="QYr-72-36d" id="afa-Jp-7sc"/>
-                        <outlet property="libraryCollectionView" destination="XE8-uH-UnK" id="qkK-bF-4Xy"/>
+                        <outlet property="libraryTableView" destination="GgW-7Q-FaT" id="v70-mW-vCh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N45-nM-L2Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

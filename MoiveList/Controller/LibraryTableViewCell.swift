@@ -21,9 +21,9 @@ class LibraryTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         posterImageView.contentMode = .scaleToFill
-        bookTitleLabel.font = .systemFont(ofSize: 17, weight: .bold)
-        publisherLabel.font = .systemFont(ofSize: 15, weight: .regular)
-        dateLabel.font = .systemFont(ofSize: 15, weight: .regular)
+        bookTitleLabel.font = .systemFont(ofSize: 16, weight: .bold)
+        publisherLabel.font = .systemFont(ofSize: 14, weight: .regular)
+        dateLabel.font = .systemFont(ofSize: 14, weight: .regular)
         priceLabel.font = .systemFont(ofSize: 13, weight: .regular)
         saleLabel.font = .systemFont(ofSize: 13, weight: .regular)
         

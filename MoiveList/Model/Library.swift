@@ -14,4 +14,5 @@ struct Library {
     var date: String
     var price: Int
     var sale: Int
+    var memo: String?
 }

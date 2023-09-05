@@ -34,7 +34,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHv-Lf-cAE">
-                        <rect key="frame" x="124" y="72" width="269" height="21"/>
+                        <rect key="frame" x="124" y="72" width="289" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -51,6 +51,12 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hr-j6-0Ll">
+                        <rect key="frame" x="371" y="134" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ZXG-aC-fNi" firstAttribute="top" secondItem="sc5-kd-kNT" secondAttribute="top" constant="10" id="05c-L0-rwt"/>
@@ -60,7 +66,8 @@
                     <constraint firstItem="xPu-eU-1W4" firstAttribute="leading" secondItem="ZXG-aC-fNi" secondAttribute="trailing" constant="10" id="JbH-96-E5e"/>
                     <constraint firstItem="uEb-XR-t5l" firstAttribute="top" secondItem="DHv-Lf-cAE" secondAttribute="bottom" constant="10" id="MtC-xy-91J"/>
                     <constraint firstAttribute="trailing" secondItem="gac-tb-nm7" secondAttribute="trailing" constant="10" id="NQN-KX-mBb"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="DHv-Lf-cAE" secondAttribute="trailing" constant="10" id="Rob-r2-oUz"/>
+                    <constraint firstItem="8hr-j6-0Ll" firstAttribute="centerY" secondItem="xPu-eU-1W4" secondAttribute="centerY" id="OEQ-Bv-3Qx"/>
+                    <constraint firstAttribute="trailing" secondItem="8hr-j6-0Ll" secondAttribute="trailing" constant="10" id="WA5-iE-KiZ"/>
                     <constraint firstItem="xPu-eU-1W4" firstAttribute="top" secondItem="uEb-XR-t5l" secondAttribute="bottom" constant="10" id="YEL-3f-hJz"/>
                     <constraint firstItem="ZXG-aC-fNi" firstAttribute="leading" secondItem="sc5-kd-kNT" secondAttribute="leading" constant="10" id="Z2u-9p-JCi"/>
                     <constraint firstItem="uEb-XR-t5l" firstAttribute="leading" secondItem="ZXG-aC-fNi" secondAttribute="trailing" constant="10" id="bSy-NA-jTK"/>
@@ -68,17 +75,19 @@
                     <constraint firstAttribute="bottom" secondItem="ZXG-aC-fNi" secondAttribute="bottom" constant="10" id="pe4-Nx-G2O"/>
                     <constraint firstItem="gac-tb-nm7" firstAttribute="leading" secondItem="ZXG-aC-fNi" secondAttribute="trailing" constant="10" id="vHi-AU-Mjm"/>
                     <constraint firstItem="qp1-7p-d9h" firstAttribute="leading" secondItem="ZXG-aC-fNi" secondAttribute="trailing" constant="10" id="w2p-Mp-XvF"/>
+                    <constraint firstAttribute="trailing" secondItem="DHv-Lf-cAE" secondAttribute="trailing" constant="10" id="wh4-VJ-0aJ"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="bookTitleLabel" destination="gac-tb-nm7" id="RVN-JW-lmS"/>
                 <outlet property="dateLabel" destination="DHv-Lf-cAE" id="w6W-Ze-9uT"/>
-                <outlet property="posterImageView" destination="ZXG-aC-fNi" id="oio-Fq-xws"/>
+                <outlet property="memoLabel" destination="8hr-j6-0Ll" id="1Cp-c6-Ef5"/>
                 <outlet property="priceLabel" destination="uEb-XR-t5l" id="uhB-fb-m7B"/>
                 <outlet property="publisherLabel" destination="qp1-7p-d9h" id="oDf-ps-mM2"/>
                 <outlet property="saleLabel" destination="xPu-eU-1W4" id="f52-EP-W2L"/>
+                <outlet property="thumbImageView" destination="ZXG-aC-fNi" id="oio-Fq-xws"/>
             </connections>
-            <point key="canvasLocation" x="272.51908396946561" y="59.154929577464792"/>
+            <point key="canvasLocation" x="270.99236641221376" y="59.154929577464792"/>
         </tableViewCell>
     </objects>
 </document>

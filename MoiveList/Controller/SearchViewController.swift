@@ -20,6 +20,8 @@ class SearchViewController: UIViewController {
     var library = LibraryList()
     var sendLibrary = LibraryList()
     
+    let realm = try! Realm()
+    
     var page = 1
     var isEnd = false // 현재 페이지가 마지막 페이지인지 점검하는 프로퍼티
     
@@ -77,7 +79,7 @@ class SearchViewController: UIViewController {
                         let price = item["price"].intValue
                         let sale = item["sale_price"].intValue
                         
-                        let data = Library(thumbnail: thumbnail, title: title, publisher: publisher, date: date, price: price, sale: sale)
+                        let data = Library(thumbnail: thumbnail, title: title, publisher: publisher, date: date, price: price, sale: sale, memo: "")
                         
                         self.library.list.append(data)
                     }
@@ -143,13 +145,14 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UITa
         let url = URL(string: image)
         
         cell.selectionStyle = .default
-        cell.posterImageView.kf.setImage(with: url)
+        cell.thumbImageView.kf.setImage(with: url)
         cell.bookTitleLabel.text = library.list[indexPath.row].title
         
         cell.publisherLabel.text = "출판사: " + library.list[indexPath.row].publisher
         cell.dateLabel.text = "초판날짜: " + library.list[indexPath.row].date
         cell.priceLabel.text = "판매가: \(library.list[indexPath.row].price)원"
         cell.saleLabel.text = "세일가: \(library.list[indexPath.row].sale)원"
+        cell.memoLabel.text = ""
         
         cell.selectionStyle = .none
         
@@ -158,18 +161,39 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UITa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        // realm 파일에 접근할 수 있도록, 위치를 찾는 코드
-        let realm = try! Realm()
-        
         let data = library.list[indexPath.row]
         
-        let task = LibraryTable(bookPosterImage: data.thumbnail, bookTitle: data.title, bookPublisher: data.publisher, bookDate: data.date, bookPrice: data.price, bookSale: data.sale)
+        let task = LibraryTable(thumbnail: data.thumbnail, title: data.title, publisher: data.publisher, date: data.date, price: data.price, sale: data.sale, memo: "")
         
-        try! realm.write {
-            realm.add(task)
-            print("Realm Add Succeed")
+        do {
+            try realm.write {
+                realm.add(task)
+            }
+        } catch let error {
+            print("Add Task Error!!", error)
         }
         
+        let imageLink = data.thumbnail
+        guard let url = URL(string: imageLink) else { return }
+        
+        DispatchQueue.global().async {
+            do {
+                let data = try Data(contentsOf: url)
+                guard let image = UIImage(data: data) else { return }
+                
+                DispatchQueue.main.async {
+                    // task는 LibraryTable의 인스턴스이다.
+                    // LibraryTable은 realm 이므로 main에서 동작하고 있고 비동기 main에서 다뤄야한다.
+                    self.saveImageToDocument(fileName: "hoon_\(task._id).jpg", image: image)
+                    
+                }
+                
+            } catch {
+                print("error")
+            }
+        }
+        
+        print("저장됩니다!")
         
         // Alert 구현
         let alert = UIAlertController(title: "추가되었습니다!", message: "선택하신 도서가 메인화면에 추가되었습니다.", preferredStyle: .alert)

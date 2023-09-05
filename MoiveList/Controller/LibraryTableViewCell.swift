@@ -11,21 +11,23 @@ class LibraryTableViewCell: UITableViewCell {
 
     static let identifier = "LibraryTableViewCell"
     
-    @IBOutlet var posterImageView: UIImageView!
+    @IBOutlet var thumbImageView: UIImageView!
     @IBOutlet var bookTitleLabel: UILabel!
     @IBOutlet var publisherLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
     @IBOutlet var saleLabel: UILabel!
+    @IBOutlet var memoLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        posterImageView.contentMode = .scaleToFill
+        thumbImageView.contentMode = .scaleToFill
         bookTitleLabel.font = .systemFont(ofSize: 16, weight: .bold)
         publisherLabel.font = .systemFont(ofSize: 14, weight: .regular)
         dateLabel.font = .systemFont(ofSize: 14, weight: .regular)
         priceLabel.font = .systemFont(ofSize: 13, weight: .regular)
         saleLabel.font = .systemFont(ofSize: 13, weight: .regular)
+        memoLabel.font = .systemFont(ofSize: 13, weight: .regular)
         
     }
 

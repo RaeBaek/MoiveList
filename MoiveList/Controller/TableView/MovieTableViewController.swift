@@ -17,6 +17,8 @@ class MovieTableViewController: UIViewController {
     // 영화 리스트 '구조체'를 받아오는 movieList 상수 선언
     let movieTableList = MovieInfo()
     
+    let realm = try! Realm()
+    
     var tasks: Results<LibraryTable>!
     
     override func viewDidLoad() {
@@ -35,9 +37,8 @@ class MovieTableViewController: UIViewController {
         title = "영화목록"
         searchButton.tintColor = .black
         
-        // Realm Read
-        let realm = try! Realm()
         tasks = realm.objects(LibraryTable.self)
+        print(realm.configuration.fileURL)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -85,17 +86,18 @@ extension MovieTableViewController: UITableViewDelegate, UITableViewDataSource {
         // row를 인자로 넘겨 cell 파일에서 사용할 수 있도록 한다.
 //        cell.configureCell(row: row)
         
-        let image = tasks[indexPath.row].bookPosterImage
-        let url = URL(string: image)
+        // fileName 가장 마지막에 확장자 꼭 기입할 것 (ex .jpg)
+        let image = loadImageFromDocument(fileName: "hoon_\(tasks[indexPath.row]._id).jpg")
         
-        cell.posterImageView.kf.setImage(with: url)
+        guard let memo = tasks[indexPath.row].memo else { return UITableViewCell() }
         
-        cell.bookTitleLabel.text = tasks[indexPath.row].bookTitle
-        
-        cell.publisherLabel.text = "출판사: " + tasks[indexPath.row].bookPublisher
-        cell.dateLabel.text = "초판날짜: " + tasks[indexPath.row].bookDate
-        cell.priceLabel.text = "판매가: \(tasks[indexPath.row].bookPrice)원"
-        cell.saleLabel.text = "세일가: \(tasks[indexPath.row].bookSale)원"
+        cell.bookTitleLabel.text = tasks[indexPath.row].title
+        cell.thumbImageView.image = image
+        cell.publisherLabel.text = "출판사: " + tasks[indexPath.row].publisher
+        cell.dateLabel.text = "초판날짜: " + tasks[indexPath.row].date
+        cell.priceLabel.text = "판매가: \(tasks[indexPath.row].price)원"
+        cell.saleLabel.text = "세일가: \(tasks[indexPath.row].sale)원"
+        cell.memoLabel.text = "메모: \(memo)"
         
         cell.selectionStyle = .none
         

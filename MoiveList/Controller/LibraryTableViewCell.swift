@@ -8,8 +8,6 @@
 import UIKit
 
 class LibraryTableViewCell: UITableViewCell {
-
-    static let identifier = "LibraryTableViewCell"
     
     @IBOutlet var thumbImageView: UIImageView!
     @IBOutlet var bookTitleLabel: UILabel!
@@ -18,6 +16,7 @@ class LibraryTableViewCell: UITableViewCell {
     @IBOutlet var priceLabel: UILabel!
     @IBOutlet var saleLabel: UILabel!
     @IBOutlet var memoLabel: UILabel!
+    @IBOutlet var likeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,7 +27,12 @@ class LibraryTableViewCell: UITableViewCell {
         priceLabel.font = .systemFont(ofSize: 13, weight: .regular)
         saleLabel.font = .systemFont(ofSize: 13, weight: .regular)
         memoLabel.font = .systemFont(ofSize: 13, weight: .regular)
+        likeLabel.font = .systemFont(ofSize: 13, weight: .regular)
         
+    }
+    
+    deinit {
+        print("셀 deinit 됨!")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -29,8 +29,8 @@ class MovieCollectionViewController: UIViewController {
         // 검색리스트에 기본 영화리스트를 대입
         searchCollectionList = movieCollectionList
         
-        let nib = UINib(nibName: "MovieCollectionViewCell", bundle: nil)
-        movieCollectionView.register(nib, forCellWithReuseIdentifier: "MovieCollectionViewCell")
+        let nib = UINib(nibName: MovieCollectionViewCell.identifier, bundle: nil)
+        movieCollectionView.register(nib, forCellWithReuseIdentifier: MovieCollectionViewCell.identifier)
         
         movieCollectionView.dataSource = self
         movieCollectionView.delegate = self
@@ -46,7 +46,7 @@ class MovieCollectionViewController: UIViewController {
     
     @IBAction func searchBarButtonItemClicked(_ sender: UIBarButtonItem) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        guard let vc = sb.instantiateViewController(identifier: "SearchViewController") as? SearchViewController else {
+        guard let vc = sb.instantiateViewController(identifier: SearchViewController.identifier) as? SearchViewController else {
             return
         }
         

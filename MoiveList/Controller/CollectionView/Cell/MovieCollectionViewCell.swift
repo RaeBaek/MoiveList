@@ -9,8 +9,6 @@ import UIKit
 
 class MovieCollectionViewCell: UICollectionViewCell {
     
-    static let identifier = "MovieCollectionViewCell"
-    
     @IBOutlet var backView: UIView!
     @IBOutlet var movietitleLabel: UILabel!
     @IBOutlet var rateLabel: UILabel!

@@ -57,6 +57,12 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5j4-w5-Ske">
+                        <rect key="frame" x="371" y="103" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ZXG-aC-fNi" firstAttribute="top" secondItem="sc5-kd-kNT" secondAttribute="top" constant="10" id="05c-L0-rwt"/>
@@ -73,6 +79,8 @@
                     <constraint firstItem="uEb-XR-t5l" firstAttribute="leading" secondItem="ZXG-aC-fNi" secondAttribute="trailing" constant="10" id="bSy-NA-jTK"/>
                     <constraint firstItem="DHv-Lf-cAE" firstAttribute="top" secondItem="qp1-7p-d9h" secondAttribute="bottom" constant="10" id="m9V-g1-gNb"/>
                     <constraint firstAttribute="bottom" secondItem="ZXG-aC-fNi" secondAttribute="bottom" constant="10" id="pe4-Nx-G2O"/>
+                    <constraint firstItem="5j4-w5-Ske" firstAttribute="centerY" secondItem="uEb-XR-t5l" secondAttribute="centerY" id="qRI-qf-fA7"/>
+                    <constraint firstAttribute="trailing" secondItem="5j4-w5-Ske" secondAttribute="trailing" constant="10" id="ti3-cF-mxl"/>
                     <constraint firstItem="gac-tb-nm7" firstAttribute="leading" secondItem="ZXG-aC-fNi" secondAttribute="trailing" constant="10" id="vHi-AU-Mjm"/>
                     <constraint firstItem="qp1-7p-d9h" firstAttribute="leading" secondItem="ZXG-aC-fNi" secondAttribute="trailing" constant="10" id="w2p-Mp-XvF"/>
                     <constraint firstAttribute="trailing" secondItem="DHv-Lf-cAE" secondAttribute="trailing" constant="10" id="wh4-VJ-0aJ"/>
@@ -81,6 +89,7 @@
             <connections>
                 <outlet property="bookTitleLabel" destination="gac-tb-nm7" id="RVN-JW-lmS"/>
                 <outlet property="dateLabel" destination="DHv-Lf-cAE" id="w6W-Ze-9uT"/>
+                <outlet property="likeLabel" destination="5j4-w5-Ske" id="vxw-wD-gba"/>
                 <outlet property="memoLabel" destination="8hr-j6-0Ll" id="1Cp-c6-Ef5"/>
                 <outlet property="priceLabel" destination="uEb-XR-t5l" id="uhB-fb-m7B"/>
                 <outlet property="publisherLabel" destination="qp1-7p-d9h" id="oDf-ps-mM2"/>

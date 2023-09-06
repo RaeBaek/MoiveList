@@ -19,11 +19,12 @@ class MovieTableViewController: UIViewController {
     
     let realm = try! Realm()
     
-    var tasks: Results<LibraryTable>!
+    var tasks: Results<LibraryTable>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(#function, "!!!!!")
+        
         mainTableView.delegate = self
         mainTableView.dataSource = self
         
@@ -39,6 +40,15 @@ class MovieTableViewController: UIViewController {
         
         tasks = realm.objects(LibraryTable.self)
         print(realm.configuration.fileURL)
+        
+        // SchemaVersion
+        do {
+            let version = try schemaVersionAtURL(realm.configuration.fileURL!)
+            print("Schema Version: \(version)")
+        } catch {
+            print(error)
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,7 +63,7 @@ class MovieTableViewController: UIViewController {
     
     @IBAction func searchButtonClicked(_ sender: UIBarButtonItem) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        guard let vc = sb.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController else { return }
+        guard let vc = sb.instantiateViewController(withIdentifier: SearchViewController.identifier) as? SearchViewController else { return }
         
         let nav = UINavigationController(rootViewController: vc)
         nav.modalPresentationStyle = .fullScreen
@@ -66,7 +76,8 @@ class MovieTableViewController: UIViewController {
 extension MovieTableViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // 영화 리스트 배열 만큼 보여주기 위해 .count에 접근
-        return tasks.count //movieTableList.movies.count
+        guard let data = tasks else { return 0 }
+        return data.count //movieTableList.movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -87,17 +98,20 @@ extension MovieTableViewController: UITableViewDelegate, UITableViewDataSource {
 //        cell.configureCell(row: row)
         
         // fileName 가장 마지막에 확장자 꼭 기입할 것 (ex .jpg)
-        let image = loadImageFromDocument(fileName: "hoon_\(tasks[indexPath.row]._id).jpg")
+        guard let data = tasks else { return UITableViewCell() }
         
-        guard let memo = tasks[indexPath.row].memo else { return UITableViewCell() }
+        let image = loadImageFromDocument(fileName: "hoon_\(data[indexPath.row]._id).jpg")
         
-        cell.bookTitleLabel.text = tasks[indexPath.row].title
+        guard let memo = data[indexPath.row].memo else { return UITableViewCell() }
+        
+        cell.bookTitleLabel.text = data[indexPath.row].libraryTitle
         cell.thumbImageView.image = image
-        cell.publisherLabel.text = "출판사: " + tasks[indexPath.row].publisher
-        cell.dateLabel.text = "초판날짜: " + tasks[indexPath.row].date
-        cell.priceLabel.text = "판매가: \(tasks[indexPath.row].price)원"
-        cell.saleLabel.text = "세일가: \(tasks[indexPath.row].sale)원"
+        cell.publisherLabel.text = "출판사: " + data[indexPath.row].publisher
+        cell.dateLabel.text = "초판날짜: " + data[indexPath.row].date
+        cell.priceLabel.text = "판매가: \(data[indexPath.row].price)원"
+        cell.saleLabel.text = "세일가: \(data[indexPath.row].sale)원"
         cell.memoLabel.text = "메모: \(memo)"
+        cell.likeLabel.text = "찜상태: \(data[indexPath.row].like)"
         
         cell.selectionStyle = .none
         
@@ -106,16 +120,44 @@ extension MovieTableViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        // 사용자가 클릭 한 테이블 뷰의 상세화면을 보기위해 detailVC을 선언
-//        guard let vc = storyboard?.instantiateViewController(identifier: MovieDetailViewController.identifier) as? MovieDetailViewController else {
-//            return
-//        }
+        guard let vc = storyboard?.instantiateViewController(identifier: DetailBookViewController.identifier) as? DetailBookViewController else {
+            return
+        }
         
-//        let row = movieTableList.movies[indexPath.row]
-//        vc.movieInfo = row
+        guard let data = tasks else { return }
+        let item = data[indexPath.row]
         
-        // 네비게이션 푸시 기능을 사용하여 화면 전환
-//        self.navigationController?.pushViewController(vc, animated: true)
+        vc.data = item
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let delete = UIContextualAction(style: .destructive, title: "삭제") { [weak self] action, view, completionHandler in
+            print("삭제 선택!")
+            
+            guard let self else { return }
+            
+            //Realm Delegate
+            
+            guard let data = tasks else { return }
+            
+            let item = data[indexPath.row]
+            
+            removeImageFromDocument(fileName: "hoon_\(item._id).jpg")
+            
+            do {
+                try realm.write {
+                    self.realm.delete(item)
+                }
+                mainTableView.reloadData()
+            } catch let error {
+                print(error)
+            }
+            
+        }
+        return UISwipeActionsConfiguration(actions: [delete])
+    }
 }

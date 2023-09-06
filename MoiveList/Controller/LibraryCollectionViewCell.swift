@@ -11,8 +11,6 @@ class LibraryCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var thumbnailImage: UIImageView!
     
-    static let identifier = "LibraryCollectionViewCell"
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

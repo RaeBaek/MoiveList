@@ -12,8 +12,6 @@ class RecentlyCollectionViewCell: UICollectionViewCell {
     @IBOutlet var backView: UIView!
     @IBOutlet var posterImageView: UIImageView!
     
-    static var identifier = "RecentlyCollectionViewCell"
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         posterImageView.clipsToBounds = true

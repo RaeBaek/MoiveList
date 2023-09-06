@@ -9,8 +9,6 @@ import UIKit
 
 class PopularTableViewCell: UITableViewCell {
     
-    static let identifier = "PopularTableViewCell"
-    
     @IBOutlet var imageBackView: UIView!
     @IBOutlet var posterImageView: UIImageView!
     @IBOutlet var movietitleLabel: UILabel!

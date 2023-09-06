@@ -30,6 +30,8 @@
 		1454B6C92A835B7800B8FD01 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1454B6C82A835B7800B8FD01 /* Kingfisher */; };
 		1454B6CB2A83658500B8FD01 /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1454B6CA2A83658500B8FD01 /* LibraryTableViewCell.swift */; };
 		145DDA812AA7124100E34E67 /* FileManager + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145DDA802AA7124100E34E67 /* FileManager + Extension.swift */; };
+		1489967A2AA84411005FEE1B /* DetailBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148996792AA84411005FEE1B /* DetailBookViewController.swift */; };
+		1489967C2AA8495A005FEE1B /* ReusableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1489967B2AA8495A005FEE1B /* ReusableProtocol.swift */; };
 		148DFD3D2AA5E53C00A779F9 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 148DFD3C2AA5E53C00A779F9 /* Realm */; };
 		148DFD3F2AA5E53C00A779F9 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 148DFD3E2AA5E53C00A779F9 /* RealmSwift */; };
 		148DFD412AA5E57000A779F9 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148DFD402AA5E57000A779F9 /* RealmModel.swift */; };
@@ -67,6 +69,8 @@
 		1454B6C32A8226E800B8FD01 /* LibraryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCollectionViewCell.swift; sourceTree = "<group>"; };
 		1454B6CA2A83658500B8FD01 /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
 		145DDA802AA7124100E34E67 /* FileManager + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager + Extension.swift"; sourceTree = "<group>"; };
+		148996792AA84411005FEE1B /* DetailBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookViewController.swift; sourceTree = "<group>"; };
+		1489967B2AA8495A005FEE1B /* ReusableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableProtocol.swift; sourceTree = "<group>"; };
 		148DFD402AA5E57000A779F9 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		148DFD452AA5EB5300A779F9 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		148DFD472AA5EB7300A779F9 /* LibraryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryList.swift; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				1448EF142A760F26009BAC7F /* MovieTableViewController.swift */,
+				148996792AA84411005FEE1B /* DetailBookViewController.swift */,
 				1448EF2D2A7633AA009BAC7F /* MovieDetailTableViewController.swift */,
 				1448EF712A77B161009BAC7F /* Cell */,
 			);
@@ -189,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				145DDA802AA7124100E34E67 /* FileManager + Extension.swift */,
+				1489967B2AA8495A005FEE1B /* ReusableProtocol.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -330,6 +336,7 @@
 				1448EF6E2A77B129009BAC7F /* MovieDetailViewController.swift in Sources */,
 				1454B6C42A8226E800B8FD01 /* LibraryCollectionViewCell.swift in Sources */,
 				148DFD412AA5E57000A779F9 /* RealmModel.swift in Sources */,
+				1489967A2AA84411005FEE1B /* DetailBookViewController.swift in Sources */,
 				14D093B72A7A369200DFF53B /* PopularTableViewCell.swift in Sources */,
 				1448EF6C2A77AB13009BAC7F /* SearchViewController.swift in Sources */,
 				1448EF2A2A76204D009BAC7F /* MovieTableViewCell.swift in Sources */,
@@ -339,6 +346,7 @@
 				1448EF2C2A762112009BAC7F /* Movie.swift in Sources */,
 				145DDA812AA7124100E34E67 /* FileManager + Extension.swift in Sources */,
 				1448EF112A760F26009BAC7F /* AppDelegate.swift in Sources */,
+				1489967C2AA8495A005FEE1B /* ReusableProtocol.swift in Sources */,
 				1448EF692A779A80009BAC7F /* MovieCollectionViewCell.swift in Sources */,
 				1448EF2E2A7633AA009BAC7F /* MovieDetailTableViewController.swift in Sources */,
 				1454B6C22A8222DB00B8FD01 /* APIKey.swift in Sources */,

@@ -8,8 +8,8 @@
 import Foundation
 
 struct Library {
-    var thumbnail: String
-    var title: String
+    var thumbnailImage: String
+    var libraryTitle: String
     var publisher: String
     var date: String
     var price: Int

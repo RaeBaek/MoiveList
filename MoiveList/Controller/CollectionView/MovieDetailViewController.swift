@@ -14,8 +14,6 @@ enum TransitionType {
 
 class MovieDetailViewController: UIViewController {
     
-    static var identifier = "MovieDetailViewController"
-    
     @IBOutlet var backPosterImageView: UIImageView!
     @IBOutlet var sidePosterImageView: UIImageView!
     @IBOutlet var sidePosterImageScreenView: UIView!

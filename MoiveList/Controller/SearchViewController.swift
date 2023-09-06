@@ -18,7 +18,6 @@ class SearchViewController: UIViewController {
     @IBOutlet var libraryTableView: UITableView!
     
     var library = LibraryList()
-    var sendLibrary = LibraryList()
     
     let realm = try! Realm()
     
@@ -72,14 +71,14 @@ class SearchViewController: UIViewController {
                     print(self.isEnd)
                     
                     for item in json["documents"].arrayValue {
-                        let thumbnail = item["thumbnail"].stringValue
-                        let title = item["title"].stringValue
+                        let thumbnailImage = item["thumbnail"].stringValue
+                        let libraryTitle = item["title"].stringValue
                         let publisher = item["publisher"].stringValue
                         let date = item["datetime"].stringValue
                         let price = item["price"].intValue
                         let sale = item["sale_price"].intValue
                         
-                        let data = Library(thumbnail: thumbnail, title: title, publisher: publisher, date: date, price: price, sale: sale, memo: "")
+                        let data = Library(thumbnailImage: thumbnailImage, libraryTitle: libraryTitle, publisher: publisher, date: date, price: price, sale: sale, memo: "")
                         
                         self.library.list.append(data)
                     }
@@ -141,18 +140,19 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UITa
             return UITableViewCell()
         }
         
-        let image = library.list[indexPath.row].thumbnail
+        let image = library.list[indexPath.row].thumbnailImage
         let url = URL(string: image)
         
         cell.selectionStyle = .default
         cell.thumbImageView.kf.setImage(with: url)
-        cell.bookTitleLabel.text = library.list[indexPath.row].title
+        cell.bookTitleLabel.text = library.list[indexPath.row].libraryTitle
         
         cell.publisherLabel.text = "출판사: " + library.list[indexPath.row].publisher
         cell.dateLabel.text = "초판날짜: " + library.list[indexPath.row].date
         cell.priceLabel.text = "판매가: \(library.list[indexPath.row].price)원"
         cell.saleLabel.text = "세일가: \(library.list[indexPath.row].sale)원"
         cell.memoLabel.text = ""
+        cell.likeLabel.text = ""
         
         cell.selectionStyle = .none
         
@@ -163,7 +163,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UITa
         
         let data = library.list[indexPath.row]
         
-        let task = LibraryTable(thumbnail: data.thumbnail, title: data.title, publisher: data.publisher, date: data.date, price: data.price, sale: data.sale, memo: "")
+        let task = LibraryTable(thumbnailImage: data.thumbnailImage, libraryTitle: data.libraryTitle, publisher: data.publisher, date: data.date, price: data.price, sale: data.sale, memo: "")
         
         do {
             try realm.write {
@@ -173,7 +173,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UITa
             print("Add Task Error!!", error)
         }
         
-        let imageLink = data.thumbnail
+        let imageLink = data.thumbnailImage
         guard let url = URL(string: imageLink) else { return }
         
         DispatchQueue.global().async {

@@ -21,13 +21,13 @@ class LookViewController: UIViewController {
         
         title = "둘러보기"
         
-        let collectionNib = UINib(nibName: "RecentlyCollectionViewCell", bundle: nil)
-        recentlyCollectionView.register(collectionNib, forCellWithReuseIdentifier: "RecentlyCollectionViewCell")
+        let collectionNib = UINib(nibName: RecentlyCollectionViewCell.identifier, bundle: nil)
+        recentlyCollectionView.register(collectionNib, forCellWithReuseIdentifier: RecentlyCollectionViewCell.identifier)
         recentlyCollectionView.delegate = self
         recentlyCollectionView.dataSource = self
         
-        let tableNib = UINib(nibName: "PopularTableViewCell", bundle: nil)
-        popularTableView.register(tableNib, forCellReuseIdentifier: "PopularTableViewCell")
+        let tableNib = UINib(nibName: PopularTableViewCell.identifier, bundle: nil)
+        popularTableView.register(tableNib, forCellReuseIdentifier: PopularTableViewCell.identifier)
         popularTableView.delegate = self
         popularTableView.dataSource = self
         
@@ -73,7 +73,7 @@ extension LookViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let vc = storyboard?.instantiateViewController(identifier: "MovieDetailViewController") as? MovieDetailViewController else {
+        guard let vc = storyboard?.instantiateViewController(identifier: MovieDetailViewController.identifier) as? MovieDetailViewController else {
             return
         }
         
